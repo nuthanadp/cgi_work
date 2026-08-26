@@ -1,0 +1,29 @@
+{
+  "model": "microsoft/Phi-3-mini-4k-instruct",
+  "timestamp": "2026-03-31T18:50:01.320894+00:00",
+  "confidence": 70.0,
+  "patterns": [
+    {
+      "type": "space_formatting",
+      "frequency": 3,
+      "description": "IBAN space formatting corrections"
+    }
+  ],
+  "suggested_rules": [
+    {
+      "rule_name": "IBAN_SPACE_REMOVAL",
+      "rule_type": "FORMAT_CORRECTION",
+      "condition": "IBAN contains spaces",
+      "action": "Remove all spaces from IBAN",
+      "confidence": 80.0,
+      "risk_level": "LOW"
+    }
+  ],
+  "automation_opportunities": [
+    {
+      "opportunity": "Auto-format IBANs",
+      "automation_rate": "70%",
+      "complexity": "LOW"
+    }
+  ]
+}

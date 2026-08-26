@@ -1,0 +1,11 @@
+langsmith
+langchain
+huggingface_hub
+python-dotenv
+requests
+langchain-community
+streamlit
+PyPDF2
+faiss-cpu
+
+

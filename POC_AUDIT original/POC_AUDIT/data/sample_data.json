@@ -1,0 +1,282 @@
+{
+  "sample_transactions": [
+    {
+      "transaction_id": "TXN_001",
+      "debitor_account": {
+        "account_id": "DR_ACC_001",
+        "iban": "DE89 3704 0044 0532 013000",
+        "bank_code": "37040044",
+        "account_type": "DR",
+        "account_name": "Mueller GmbH",
+        "currency": "EUR",
+        "is_active": true,
+        "is_valid_iban": false,
+        "is_valid_bank_code": true
+      },
+      "creditor_account": {
+        "account_id": "CR_ACC_001", 
+        "iban": "FR1420041010050500013M02606",
+        "bank_code": "20041",
+        "account_type": "CR",
+        "account_name": "Dupont SA",
+        "currency": "EUR",
+        "is_active": true,
+        "is_valid_iban": true,
+        "is_valid_bank_code": true
+      },
+      "amount": 15000.00,
+      "currency": "EUR",
+      "clearing_type": "INTERNATIONAL",
+      "message_type": "MT103",
+      "validation_status": "MANUAL_REPAIR_REQUIRED"
+    },
+    {
+      "transaction_id": "TXN_002",
+      "debitor_account": {
+        "account_id": "DR_ACC_002",
+        "iban": "GB29 BARC 2000 0012 3456 78",
+        "bank_code": "BARC",
+        "account_type": "DR", 
+        "account_name": "Johnson Ltd",
+        "currency": "GBP",
+        "is_active": true,
+        "is_valid_iban": false,
+        "is_valid_bank_code": false
+      },
+      "creditor_account": {
+        "account_id": "CR_ACC_002",
+        "iban": "NL91ABNA0417164300",
+        "bank_code": "ABNA",
+        "account_type": "CR",
+        "account_name": "Van der Berg BV",
+        "currency": "EUR",
+        "is_active": true,
+        "is_valid_iban": true,
+        "is_valid_bank_code": true
+      },
+      "amount": 8500.00,
+      "currency": "EUR",
+      "clearing_type": "INTERNATIONAL",
+      "message_type": "PACS.008",
+      "validation_status": "MANUAL_REPAIR_REQUIRED"
+    },
+    {
+      "transaction_id": "TXN_003",
+      "debitor_account": {
+        "account_id": "DR_ACC_003",
+        "iban": "DE89370400440532013000",
+        "bank_code": "37040044",
+        "account_type": "DR",
+        "account_name": "Schmidt AG",
+        "currency": "EUR",
+        "is_active": true,
+        "is_valid_iban": true,
+        "is_valid_bank_code": true
+      },
+      "creditor_account": {
+        "account_id": "CR_ACC_003",
+        "iban": "FR14 2004 1010 0505 0001 3M02 606",
+        "bank_code": "20041",
+        "account_type": "CR",
+        "account_name": "Bertrand SARL",
+        "currency": "EUR",
+        "is_active": true,
+        "is_valid_iban": false,
+        "is_valid_bank_code": true
+      },
+      "amount": 22000.00,
+      "currency": "EUR",
+      "clearing_type": "INTERNATIONAL", 
+      "message_type": "MT103",
+      "validation_status": "MANUAL_REPAIR_REQUIRED"
+    },
+    {
+      "transaction_id": "TXN_004",
+      "debitor_account": {
+        "account_id": "DR_ACC_004",
+        "iban": "US64SVBKUS6S3300958879",
+        "bank_code": "021000021",
+        "account_type": "DR",
+        "account_name": "American Corp",
+        "currency": "USD",
+        "is_active": true,
+        "is_valid_iban": true,
+        "is_valid_bank_code": true
+      },
+      "creditor_account": {
+        "account_id": "CR_ACC_004",
+        "iban": "DE89 3704 0044 0532 013000",
+        "bank_code": "37040044",
+        "account_type": "CR",
+        "account_name": "Weber GmbH",
+        "currency": "EUR", 
+        "is_active": true,
+        "is_valid_iban": false,
+        "is_valid_bank_code": true
+      },
+      "amount": 50000.00,
+      "currency": "USD",
+      "clearing_type": "HIGH_VALUE",
+      "message_type": "MT202",
+      "validation_status": "MANUAL_REPAIR_REQUIRED"
+    },
+    {
+      "transaction_id": "TXN_005",
+      "debitor_account": {
+        "account_id": "DR_ACC_005",
+        "iban": "NL91 ABNA 0417 1643 00",
+        "bank_code": "ABNA",
+        "account_type": "DR",
+        "account_name": "van Oosten BV",
+        "currency": "EUR",
+        "is_active": true,
+        "is_valid_iban": false,
+        "is_valid_bank_code": true
+      },
+      "creditor_account": {
+        "account_id": "CR_ACC_005",
+        "iban": "GB29BARC20000012345678",
+        "bank_code": "BARCGB22",
+        "account_type": "CR",
+        "account_name": "Williams & Sons",
+        "currency": "GBP",
+        "is_active": true,
+        "is_valid_iban": true,
+        "is_valid_bank_code": true
+      },
+      "amount": 12500.00,
+      "currency": "EUR",
+      "clearing_type": "INTERNATIONAL",
+      "message_type": "PACS.008",
+      "validation_status": "AUTO_REPAIRED"
+    }
+  ],
+  "sample_manual_repairs": [
+    {
+      "log_id": "LOG_001",
+      "log_type": "DR_ACCOUNT_MANUAL_REPAIR",
+      "transaction_id": "TXN_001",
+      "clearing_type": "INTERNATIONAL",
+      "message_type": "MT103",
+      "old_account_id": "DR_ACC_001",
+      "old_iban": "DE89 3704 0044 0532 013000",
+      "new_account_id": "DR_ACC_001",
+      "new_iban": "DE89370400440532013000",
+      "repaired_by": "user1@bank.com",
+      "repair_reason": "IBAN space formatting",
+      "validation_errors": ["IBAN_INVALID_FORMAT"],
+      "auto_repair_attempts": 1
+    },
+    {
+      "log_id": "LOG_002", 
+      "log_type": "DR_ACCOUNT_MANUAL_REPAIR",
+      "transaction_id": "TXN_002",
+      "clearing_type": "INTERNATIONAL",
+      "message_type": "PACS.008",
+      "old_account_id": "DR_ACC_002",
+      "old_iban": "GB29 BARC 2000 0012 3456 78",
+      "new_account_id": "DR_ACC_002",
+      "new_iban": "GB29BARC20000012345678",
+      "repaired_by": "user2@bank.com",
+      "repair_reason": "IBAN space removal and bank code fix",
+      "validation_errors": ["IBAN_INVALID_FORMAT", "BANK_CODE_INVALID"],
+      "auto_repair_attempts": 2
+    },
+    {
+      "log_id": "LOG_003",
+      "log_type": "CR_ACCOUNT_MANUAL_REPAIR", 
+      "transaction_id": "TXN_003",
+      "clearing_type": "INTERNATIONAL",
+      "message_type": "MT103",
+      "old_account_id": "CR_ACC_003",
+      "old_iban": "FR14 2004 1010 0505 0001 3M02 606",
+      "new_account_id": "CR_ACC_003",
+      "new_iban": "FR1420041010050500013M02606",
+      "repaired_by": "user1@bank.com",
+      "repair_reason": "IBAN formatting - removed spaces",
+      "validation_errors": ["IBAN_INVALID_FORMAT"],
+      "auto_repair_attempts": 1
+    },
+    {
+      "log_id": "LOG_004",
+      "log_type": "CR_ACCOUNT_MANUAL_REPAIR",
+      "transaction_id": "TXN_004", 
+      "clearing_type": "HIGH_VALUE",
+      "message_type": "MT202",
+      "old_account_id": "CR_ACC_004",
+      "old_iban": "DE89 3704 0044 0532 013000",
+      "new_account_id": "CR_ACC_004", 
+      "new_iban": "DE89370400440532013000",
+      "repaired_by": "user3@bank.com",
+      "repair_reason": "High value transaction IBAN formatting",
+      "validation_errors": ["IBAN_INVALID_FORMAT", "HIGH_VALUE_NAME_REQUIRED"],
+      "auto_repair_attempts": 0
+    },
+    {
+      "log_id": "LOG_005",
+      "log_type": "DR_ACCOUNT_MANUAL_REPAIR",
+      "transaction_id": "TXN_006",
+      "clearing_type": "INTERNATIONAL",
+      "message_type": "PACS.008", 
+      "old_account_id": "DR_ACC_005",
+      "old_iban": "NL91 ABNA 0417 1643 00",
+      "new_account_id": "DR_ACC_005",
+      "new_iban": "NL91ABNA0417164300",
+      "repaired_by": "user2@bank.com",
+      "repair_reason": "IBAN space formatting correction",
+      "validation_errors": ["IBAN_INVALID_FORMAT"],
+      "auto_repair_attempts": 1
+    },
+    {
+      "log_id": "LOG_006", 
+      "log_type": "DR_ACCOUNT_MANUAL_REPAIR",
+      "transaction_id": "TXN_007",
+      "clearing_type": "INTERNATIONAL",
+      "message_type": "MT103",
+      "old_account_id": "DR_ACC_006",
+      "old_iban": "GB29 HSBC 2000 0012 3456 78",
+      "new_account_id": "DR_ACC_006",
+      "new_iban": "GB29HSBC20000012345678", 
+      "repaired_by": "user1@bank.com",
+      "repair_reason": "IBAN space removal",
+      "validation_errors": ["IBAN_INVALID_FORMAT"],
+      "auto_repair_attempts": 0
+    },
+    {
+      "log_id": "LOG_007",
+      "log_type": "CR_ACCOUNT_MANUAL_REPAIR",
+      "transaction_id": "TXN_008",
+      "clearing_type": "DOMESTIC", 
+      "message_type": "PACS.008",
+      "old_account_id": "CR_ACC_007",
+      "old_iban": "DE89 3704 0044 0532 013000",
+      "new_account_id": "CR_ACC_007",
+      "new_iban": "DE89370400440532013000",
+      "repaired_by": "user3@bank.com",
+      "repair_reason": "Standard IBAN formatting",
+      "validation_errors": ["IBAN_INVALID_FORMAT"],
+      "auto_repair_attempts": 1
+    },
+    {
+      "log_id": "LOG_008", 
+      "log_type": "DR_ACCOUNT_MANUAL_REPAIR",
+      "transaction_id": "TXN_009",
+      "clearing_type": "INTERNATIONAL",
+      "message_type": "MT103", 
+      "old_account_id": "DR_ACC_007",
+      "old_iban": "FR14 2004 1010 0505 0001 3M02 606",
+      "new_account_id": "DR_ACC_007",
+      "new_iban": "FR1420041010050500013M02606",
+      "repaired_by": "user2@bank.com",
+      "repair_reason": "IBAN formatting correction",
+      "validation_errors": ["IBAN_INVALID_FORMAT"],
+      "auto_repair_attempts": 2
+    }
+  ],
+  "metadata": {
+    "generated_date": "2024-01-15T10:30:00Z",
+    "description": "Sample data for APS POC demonstration",
+    "version": "1.0",
+    "notes": "Data includes common validation errors and repair patterns for testing"
+  }
+}

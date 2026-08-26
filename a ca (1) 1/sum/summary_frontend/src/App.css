@@ -1,0 +1,122 @@
+/* Body & font */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1f1f1f;
+    color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.header-logo {
+    font-weight: bold;
+    font-size: 22px;
+    color: #FF3B3B;
+}
+
+.header-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+header p {
+    color: #bbbbbb;
+    margin: 5px 0 0 0;
+}
+
+/* File input section */
+.file-upload {
+    margin-bottom: 20px;
+}
+
+.file-upload input {
+    background-color: #2b2b2b;
+    color: white;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #444;
+}
+
+.file-upload button {
+    margin-left: 10px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #FF3B3B;
+    color: white;
+}
+
+.file-upload button:hover {
+    background-color: #e03232;
+}
+
+/* Scroll box */
+.scroll-box {
+    max-height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #1f1f1f;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    filter: brightness(1.1);
+}
+
+/* Tabs */
+.react-tabs__tab-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.react-tabs__tab {
+    list-style: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #2b2b2b;
+    color: white;
+    border-radius: 6px 6px 0 0;
+    margin-right: 5px;
+}
+
+.react-tabs__tab--selected {
+    background-color: #FF3B3B;
+    color: white;
+}
+
+/* Keywords highlighting */
+.keyword {
+    background-color: #ffc107;
+    color: black;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: bold;
+}

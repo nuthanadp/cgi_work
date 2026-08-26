@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Environment / secrets
+.env
+*.env
+
+# VS Code
+.vscode/
+
+# SQLite databases
+*.sqlite
+*.db
+
+# Test artifacts
+tests/test_audit.json
+tests/test_database.sqlite
+
+# Output / generated
+output/
+data/dev_audit_logs.json
+data/dev_database.sqlite
+
+# Distribution
+dist/
+build/
+*.egg-info/

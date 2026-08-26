@@ -1,0 +1,70 @@
+{
+    "enhanced_manual_repair_logs": [
+        {
+            "log_type": "DR_ACCOUNT_MANUAL_REPAIR",
+            "clearing_type": "SEPA",
+            "message_type": "103",
+            "old_account_id": "ACC001",
+            "old_iban": "DE89 3704 0044 0532 0130 00",
+            "new_account_id": "ACC001",
+            "new_iban": "DE89370400440532013000",
+            "timestamp": "2026-03-31T10:15:30.123Z",
+            "repair_reason": "IBAN space formatting"
+        },
+        {
+            "log_type": "DR_ACCOUNT_MANUAL_REPAIR", 
+            "clearing_type": "SEPA",
+            "message_type": "103",
+            "old_account_id": "ACC005",
+            "old_iban": "DE89 3704 0044 0532 0130 00",
+            "new_account_id": "ACC005",
+            "new_iban": "DE89370400440532013000",
+            "timestamp": "2026-03-31T14:22:15.456Z",
+            "repair_reason": "IBAN space formatting"
+        },
+        {
+            "log_type": "CR_ACCOUNT_MANUAL_REPAIR",
+            "clearing_type": "SEPA", 
+            "message_type": "103",
+            "old_account_id": "ACC007",
+            "old_iban": "DE89 3704 0044 0532 0130 00",
+            "new_account_id": "ACC007", 
+            "new_iban": "DE89370400440532013000",
+            "timestamp": "2026-03-31T16:45:22.789Z",
+            "repair_reason": "IBAN space formatting"
+        },
+        {
+            "log_type": "DR_ACCOUNT_MANUAL_REPAIR",
+            "clearing_type": "SWIFT",
+            "message_type": "202", 
+            "old_account_id": "ACC012",
+            "old_iban": "GB29NWBK601613314000",
+            "new_account_id": "ACC012",
+            "new_iban": "GB29NWBK60161331400000", 
+            "timestamp": "2026-03-31T18:30:45.012Z",
+            "repair_reason": "IBAN length correction"
+        },
+        {
+            "log_type": "DR_ACCOUNT_MANUAL_REPAIR",
+            "clearing_type": "SWIFT", 
+            "message_type": "202",
+            "old_account_id": "ACC015",
+            "old_iban": "GB29NWBK601613314000",
+            "new_account_id": "ACC015",
+            "new_iban": "GB29NWBK60161331400000",
+            "timestamp": "2026-03-31T20:12:33.345Z",
+            "repair_reason": "IBAN length correction"
+        },
+        {
+            "log_type": "CR_ACCOUNT_MANUAL_REPAIR",
+            "clearing_type": "TARGET2",
+            "message_type": "103",
+            "old_account_id": "ACC020",
+            "old_iban": "FR1420041010050500013M02606",
+            "new_account_id": "ACC021", 
+            "new_iban": "FR1420041010050500013M02607",
+            "timestamp": "2026-03-31T22:05:18.678Z",
+            "repair_reason": "Account ID increment"
+        }
+    ]
+}

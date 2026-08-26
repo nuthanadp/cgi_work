@@ -1,0 +1,59 @@
+{
+  "patterns": [
+    {
+      "type": "repeated_repair",
+      "frequency": 3,
+      "description": "Repeated repair: DE89 3704 0044 0532 0130 00 \u2192 DE89370400440532013000",
+      "pattern": "DE89 3704 0044 0532 0130 00 \u2192 DE89370400440532013000"
+    },
+    {
+      "type": "repeated_repair",
+      "frequency": 2,
+      "description": "Repeated repair: GB29NWBK601613314000 \u2192 GB29NWBK60161331400000",
+      "pattern": "GB29NWBK601613314000 \u2192 GB29NWBK60161331400000"
+    }
+  ],
+  "suggested_rules": [
+    {
+      "rule_type": "AUTO_REPAIR_RULE",
+      "condition": {
+        "clearingType": "SEPA",
+        "msgType": "103",
+        "oldIBAN": "DE89 3704 0044 0532 0130 00"
+      },
+      "action": {
+        "replace_IBAN": "DE89370400440532013000"
+      },
+      "confidence": 90,
+      "reason": "Same manual repair repeated 3 times",
+      "risk_level": "LOW"
+    },
+    {
+      "rule_type": "AUTO_REPAIR_RULE",
+      "condition": {
+        "clearingType": "SWIFT",
+        "msgType": "202",
+        "oldIBAN": "GB29NWBK601613314000"
+      },
+      "action": {
+        "replace_IBAN": "GB29NWBK60161331400000"
+      },
+      "confidence": 60,
+      "reason": "Same manual repair repeated 2 times",
+      "risk_level": "MEDIUM"
+    }
+  ],
+  "automation_opportunities": [
+    {
+      "opportunity": "Auto-repair 2 repeated patterns",
+      "automation_rate": "83%",
+      "complexity": "LOW",
+      "automatable_cases": 5,
+      "total_cases": 6
+    }
+  ],
+  "confidence": 70.0,
+  "model": "microsoft/Phi-3-mini-4k-instruct",
+  "timestamp": "2026-04-01T00:28:57.427835",
+  "analysis_type": "data_driven_repair_rules"
+}
