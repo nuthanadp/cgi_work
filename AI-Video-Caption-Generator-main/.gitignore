@@ -1,0 +1,16 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+PYX-env/
+.venv/
+
+# Large local assets
+static/videos/
+Model_Whisper/model.bin
+
+# Environment files
+.env
